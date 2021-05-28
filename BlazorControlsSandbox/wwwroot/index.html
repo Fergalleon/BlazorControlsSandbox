@@ -20,17 +20,7 @@
         <a class="dismiss">🗙</a>
     </div>
 
-    <!-- <script type="text/javascript"> -->
-    <!--     window.getDimensions = function () { -->
-    <!--         return { -->
-    <!--             width: window.innerWidth, -->
-    <!--             height: window.innerHeight -->
-    <!--         }; -->
-    <!--     }; -->
-    <!-- </script> -->
-
-    <!-- <script>MyDOMGetBoundingClientRect = (element, parm) => { return element.getBoundingClientRect(); };</script> -->
-    
+    <!-- todo: this might not be required, if offsets work correctly.-->
     <script>
         MyDOMGetBoundingClientRect = (elementId) => {
             console.log("MyDOMGetBoundingClientRect, elementId=" + elementId);
@@ -43,7 +33,7 @@
         };
     </script>
 
-<script src="_framework/blazor.webassembly.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
 </body>
 
 </html>
