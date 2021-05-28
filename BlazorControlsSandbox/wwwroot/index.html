@@ -20,19 +20,6 @@
         <a class="dismiss">🗙</a>
     </div>
 
-    <!-- todo: this might not be required, if offsets work correctly.-->
-    <script>
-        MyDOMGetBoundingClientRect = (elementId) => {
-            console.log("MyDOMGetBoundingClientRect, elementId=" + elementId);
-            if (elementId === null) {
-                return null;
-            }
-            var element = document.getElementById(elementId);
-            console.log("found element" + element);
-            return element.getBoundingClientRect();
-        };
-    </script>
-
     <script src="_framework/blazor.webassembly.js"></script>
 </body>
 
