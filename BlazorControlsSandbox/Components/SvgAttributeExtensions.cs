@@ -13,20 +13,7 @@
         }
         private static bool IsWithinBoundary(this SvgAttributes svgAttributes, Point clickPoint)
         {
-            return IsWithinWidthBoundary(svgAttributes, clickPoint.X) &&
-                   IsWithinHeightBoundary(svgAttributes, clickPoint.Y);
-        }
-
-        private static bool IsWithinWidthBoundary(SvgAttributes svgAttributes, int x)
-        {
-            return x >= svgAttributes.X &&
-                   x <= svgAttributes.X + svgAttributes.Width;
-        }
-
-        private static bool IsWithinHeightBoundary(SvgAttributes svgAttributes, int y)
-        {
-            return y >= svgAttributes.Y &&
-                   y <= svgAttributes.Y + svgAttributes.Height;
+            return svgAttributes.Boundary.Contains(clickPoint);
         }
     }
 }

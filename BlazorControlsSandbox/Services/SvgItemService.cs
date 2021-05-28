@@ -1,6 +1,7 @@
 ﻿namespace BlazorControlsSandbox.Services
 {
     using System.Collections.Generic;
+    using System.Drawing;
     using System.Threading.Tasks;
     using Models;
 
@@ -15,8 +16,8 @@
         {
             var items = new List<SvgAttributes>
             {
-                new SvgAttributes(50, 20, 150, 50, "Item1"),
-                new SvgAttributes(250, 20, 150, 50, "Item2"),
+                new SvgAttributes(new Rectangle(50, 20, 150, 50), "Item1"),
+                new SvgAttributes(new Rectangle(250, 20, 150, 50), "Item2"),
             };
 
             return await Task.FromResult(items);

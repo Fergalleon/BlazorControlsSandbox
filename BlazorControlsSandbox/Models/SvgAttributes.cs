@@ -1,24 +1,35 @@
 ﻿namespace BlazorControlsSandbox.Models
 {
+    using System.Drawing;
+
     public class SvgAttributes
     {
-        public SvgAttributes(int x, int y, int width, int height, string displayValue)
+        public SvgAttributes(Rectangle boundary, string displayValue)
         {
-            X = x;
-            Y = y;
-            Width = width;
-            Height = height;
+            Boundary = boundary;
             DisplayValue = displayValue;
         }
 
-        public int X { get; set; }
-        public int Y { get; set; }
-        public int Width { get; set; }
-        public int Height { get; set; }
-
-        public int TextX => X + 30;
-        public int TextY => Y + 30;
+        public Rectangle Boundary { get; set; }
+        
+        public Point TextPosition => new Point(Boundary.Left + 30, Boundary.Top + 30);
 
         public string DisplayValue { get; set; }
+
+        public void MoveTo(int newX, int newY)
+        {
+            MoveTo(new Point(newX, newY));
+        }
+
+        public void MoveTo(Point newPoint)
+        {
+            var size = Boundary.Size;
+            Boundary = new Rectangle(newPoint, size);
+        }
+
+        public int X => Boundary.X;
+        public int Y => Boundary.Y;
+        public int Width => Boundary.Width;
+        public int Height => Boundary.Height;
     }
 }

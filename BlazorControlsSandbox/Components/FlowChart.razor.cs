@@ -17,8 +17,6 @@
 
         [Inject] public IJSRuntime JsRuntime { get; set; }
 
-        private Point ContainerOffset { get; set; }
-
         private SvgAttributes SelectedItem { get; set; }
 
         private Point ClickPoint { get; set; }
@@ -44,8 +42,7 @@
             }
 
             // todo: (hack) this needs to take into account click pos relative to item being dragged's top left, and offset.
-            SelectedItem.X = (int) e.OffsetX;
-            SelectedItem.Y = (int) e.OffsetY;
+            SelectedItem.MoveTo((int) e.OffsetX, (int) e.OffsetY);
         }
 
         private void HandleMouseUp(MouseEventArgs e)
