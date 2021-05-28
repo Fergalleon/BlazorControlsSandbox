@@ -1,8 +1,8 @@
-﻿<div @onmousedown="@HandleMouseDown" @onmousemove="@HandleMouseMove" @onmouseup="@HandleMouseUp">
+﻿<div id="canvas-wrapper" class="canvas-wrapper" @onmousedown="@HandleMouseDown" @onmousemove="@HandleMouseMove" @onmouseup="@HandleMouseUp">
 
     <p>Last Click=@ClickPoint.ToString(), SelectedItemText =@SelectedItemText </p>
     
-    <svg id="canvas" width="100%" height="100%">
+    <svg id="canvas" class="canvas">
 
         @foreach (var svgItem in SvgComponents)
         {
