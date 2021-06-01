@@ -1,6 +1,7 @@
 ﻿namespace BlazorControlsSandbox.Models
 {
     using System.Drawing;
+    using System.Dynamic;
 
     public class SvgAttributes
     {

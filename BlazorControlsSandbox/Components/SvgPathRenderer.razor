@@ -1,0 +1,11 @@
+﻿<div id="canvas-wrapper" class="canvas-wrapper">
+    
+    <button @onclick="@HandleOnClick" disabled="@(!CanIncrementPath)" >update Svg</button>
+
+    <svg id="canvas" class="canvas">
+
+        <path d="@SvgPath" stroke="black"/>
+
+    </svg>
+
+</div>

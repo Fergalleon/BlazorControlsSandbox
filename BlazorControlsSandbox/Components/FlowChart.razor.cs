@@ -14,9 +14,7 @@
         private bool _isMouseDown = false;
 
         [Inject] public ISvgItemService SvgItemService { get; set; }
-
-        [Inject] public IJSRuntime JsRuntime { get; set; }
-
+        
         private SvgAttributes SelectedItem { get; set; }
 
         private Point ClickPoint { get; set; }
